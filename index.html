@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Secondplayer - Tracking</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <!--[if lt IE 9]>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secondplayer - Tracking</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
-   </head>
-   <body>
-      <div id="order-information">
-         <div id="details" class="container">
-            <div class="row">
-               <div class="col-xs-12">
-                  <h2>Bestel nummer: <span class="ordernummer"></span></h2>
-                  <h4 class="grey-text">Laatst ge-update: <span class="updatetime"></span></h4>
-                  <h4 class="status grey-text"></h4>
-               </div>
-            </div>
-         </div>
-         <div id="order" class="container">
-            <div class="row">
-               <div class="col-xs-12">
-                 <h2 class="text-center">Jou pakket is <span class="status"></span></h2>
-                  <div class="col-md-12">
-                     <div id="bar"></div>
-                  </div>
-                  <div class="col-xs-4 left">
-                     <div class="img-wrapper informatie">
-                        <img src="images/home.svg">
-                     </div>
-                  </div>
-                  <div class="col-xs-4 center">
-                     <div class="img-wrapper onderweg">
-                        <img src="images/bus.svg">
-                     </div>
-                  </div>
-                  <div class="col-xs-4 right">
-                     <div class="img-wrapper delivered">
-                        <img src="images/home.svg">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-xs-12">
+</head>
 
-                  <h4 class="text-center">Bekijk hele log verslag</h4>
-                  <button type="button" class="btn btn-info"  data-toggle="collapse" data-target="#demo">Collapsible</button>
-                  <div id="demo" class="collapse">
-                     <ul id="log"></ul>
-                  </div>
-               </div>
-            </div>
-         </div>
+<body>
+  <div id="order-information">
+    <div id="details" class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Bestel nummer: <span class="ordernummer"></span></h2>
+          <h4 class="grey-text">Laatst ge-update: <span class="updatetime"></span></h4>
+          <h4 class="status grey-text"></h4>
+        </div>
       </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-      <script src="js/app.js" charset="utf-8"></script>
-   </body>
+    </div>
+    <div id="order" class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 id="status" class="text-center">Jou pakket is <span class="status"></span></h2>
+          <div class="col-md-12">
+            <div id="bar"></div>
+          </div>
+          <div class="col-xs-4 left">
+            <div class="img-wrapper informatie">
+              <img src="images/home.svg">
+            </div>
+          </div>
+          <div class="col-xs-4 center">
+            <div class="img-wrapper onderweg">
+              <img src="images/bus.svg">
+            </div>
+          </div>
+          <div class="col-xs-4 right">
+            <div class="img-wrapper delivered">
+              <img src="images/home.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul id="info" class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Product informatie</a></li>
+            <li><a data-toggle="tab" href="#menu1">Bezorg verslag</a></li>
+
+          </ul>
+
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+              <h3>Product informatie</h3>
+              <div id="product-info">
+              </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <h3>Bezorg verslag</h3>
+              <div id="log">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</body>
+
 </html>
